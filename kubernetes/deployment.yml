@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: consumer
-          image: 052937454741.dkr.ecr.ap-northeast-2.amazonaws.com/lecture-consumer:latest
+          image: hajeongcheol/alert-consumer:latest
           resources:
             limits:
               cpu: 500m
@@ -34,7 +34,7 @@ spec:
                 name: kafka-config
                 key: LOG_FILE
         - name: web
-          image: 052937454741.dkr.ecr.ap-northeast-2.amazonaws.com/lecture-web:latest
+          image: hajeongcheol/alert-web:latest
           ports:
             - containerPort: 8084
           resources:
